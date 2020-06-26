@@ -10,7 +10,14 @@
     <a href="index.html">
      <img src="img/logo-technomart.svg" width="220" height="47" alt="Техномарт">
     </a>
-    <a href="#">Поиск</a>
+  </div>
+    <form action="https://echo.htmlacademy.ru/courses" method="post">
+     <input type="search" name="search" id="search" placeholder="">
+     <div class="buttons">
+    <input type="submit" value="Поиск">
+  </div>
+  </form>
+   <div>
     <a href="#">Закладки 0</a>
     <a href="#">Корзина</a>
     <a href="#">Оформить заказ</a>
@@ -58,23 +65,22 @@
           <li>
           <input type="checkbox" name="bosch" id="filter-bosch"  checked>
             <label for="filter-bosch">BOSCH</label>
+            </li>
             <li>
           <input type="checkbox" name="Interskol" id="filter-Interskol">
             <label for="filter-Interskol">ИНТЕРСКОЛ</label>
           </li>
-          </li>
-            </li>
           <li>
            <input type="checkbox" name="makita" id="filter-makita" checked>
             <label for="filter-makita">MAKITA</label>
-              <li>
+            </li>
+            <li>
           <input type="checkbox" name="dewalt" id="filter-dewalt">
             <label for="filter-dewalt">DEWALT</label>
           </li>
             <li>
           <input type="checkbox" name="hitachi" id="filter-hitachi">
             <label for="filter-hitachi">HITACHI</label>
-          </li>
           </li>   
         </ul>
       </fieldset>
@@ -86,8 +92,8 @@
             <label for="filter-rechargeable">АККУМУЛЯТОРНЫЕ</label>
            </li>
              <li>
-             <input type="radio" name="product-perforator" value=" network" id="filter- network">
-            <label for="filter- network">СЕТЕВЫЕ</label>
+             <input type="radio" name="product-perforator" value=" network" id="filter-network">
+            <label for="filter-network">СЕТЕВЫЕ</label>
            </li>
         </ul>
       </fieldset>
@@ -186,5 +192,13 @@
        <a href="html://htmlacademy.ru">htmlacademy</a>
       </p>
 </footer>
+<section>
+  <h3>Покупка</h3>
+ <form action="https://echo.htmlacademy.ru" method="post">
+  <label for="search">Товар добавлен в корзину!</label>
+  <input type="submit" value="Оформить заказ">
+  <input type="submit" value="Продолжить покупки">
+  </form> 
+</section>
 </body>
 </html>

@@ -105,7 +105,7 @@ img {
 
 .logo-area {
   width: 220px;
-  height: 47px;
+  height: 49px;
   background-color: #EE3643;
   margin-left: 130px;
   text-align: center;
@@ -238,7 +238,7 @@ img {
   font-size: 18px;;
   align-items: center;
   line-height: 1,33;
-  width: 940px;
+  width: 960px;
   min-height: 60px;
   background-color: #32425C;
   color: #FFFFFF;
@@ -364,8 +364,8 @@ img {
   grid-row-end: 4;
   grid-column-start: 1;
   grid-column-end: 3;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 
   outline: 5px solid rgba(0, 255, 0, 0.3);
   outline-offset: -5px;
@@ -374,7 +374,11 @@ img {
 .photo-card {
   background-color: var(--basic-dark);
   border: 7px solid var(--basic-white);
-  argin-left: 130px;
+  margin-left: 130px;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: -1;
 }
 
 .photo-container h3 {
@@ -622,19 +626,20 @@ img {
 
 .choose a,
 .choose h3 {
-  padding: 10px;
+  padding: 0;
   font-size: 13px;
-  line-height: 1,84;
+  line-height: 18px;
   font-family: 'PT Sans', sans-serif;
   text-transform: uppercase;
   background-color: #F7F3EC;
+  display: inline;
 }
 
 
 .choose h3 {
   background-color: #F7F3EC;
-  width: 220px;
-  height: 38px;
+   width: 700px; 
+   height: 38px;
 }
 .choose a:nth-of-type(4), 
 .choose a:nth-of-type(1) {
@@ -663,12 +668,12 @@ img {
   line-height: 1,33;
 }
 
-.filterr fieldset:first-child {
+.filterr .fieldset:first-child {
   background-color: #F7F3EC;
   border-radius: 5px; 
 }
 
-fieldset h3 {
+.fieldset h3 {
   background-color: #FFFFFF;
   height: 40px;
 
@@ -681,8 +686,10 @@ fieldset h3 {
 
 
 .interest {
-  width: 1200px;
-  min-height: 261px;
+  margin-left: 162px;
+  width: 920px;
+  font-weight: bold;
+  min-height: 251px;
   background-color: #F2F6F8;
 }
 
@@ -707,40 +714,63 @@ fieldset h3 {
 }
 
 .footer-user-menu {
+
   background-color: #32425C;
   color: #FFFFFF;
-  width: 1200px;
-}
-
-
-
-.footer-site-navigation a {
-  color: #FFFFFF;
-  list-style: none;
-  text-align: center;
-  
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  display: inline;
+  justify-content: flex-start;
+  
+ outline: 5px solid rgba(255, 0, 0, 0.7);
+  outline-offset: -5px;
 
 }
+
+.footer-user-wrapper {
+ outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px;
+
+}
+.footer-user-wrapper p {
+  padding-left: 130px;
+   width: 360px;
+}
+
+
+.tunnel {
+  padding-right: 130px;
+  width: 630px;
+
+  outline: 5px solid rgba(255, 0, 0, 0.3);
+  outline-offset: -5px; 
+}
+
+
+.footer-site-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 600px;
+  
+}
+
+
+.tunnel a {
+  color: #FFFFFF;
+  padding: 10px;
+
+ } 
  
 
-
-.tunnel li {
- width: 141px;
- margin: 0 auto;
- padding: 0;
-  list-style: none;
-     
+.footer-site-navigation li {
+   list-style: none; 
+   margin-top: 20px; 
 }
+
 
 .footer-site-navigation:last-child a {
   color: #FFD180;
-
 }
-
 
 
 .footer-site-navigation a:hover,
@@ -749,44 +779,54 @@ fieldset h3 {
 }
 
 .telephone {
-  margin-left: 130px;
+  padding-top: 22px;
+  padding-bottom: 54px;
+
+  outline: groove;
+  outline-offset: -5px;
+  
 }
 
-
+.telephone p,
 .telephone a {
   color: #FFFFFF;
+  
 }
 
 /* social-Footer */
 
 
 .cellar-footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  justify-content: space-around;
+
   background-color: #293449;
   color: #FFFFFF;
 
-  outline: 5px solid rgba(255, 0, 0, 0.3);
-  outline-offset: -5px; 
+
 }
 
 .cellar-footer p {
-padding: 36px;
+  idth: 250px;
+  padding: 36px;
+   padding-left: 100px;
+
 }
 
 
 .cellar-footer li {
   text-align: center;
   list-style: none;
+  margin: auto; 
+
 }
 
 /* Social button */
 
 .footer-social{
-
-
-  outline: 5px solid rgba(0, 255, 255, 0.7);
-  outline-offset: -5px;
+  width: 350px;
+  display: flex;
+  flex-direction: row;
 }
 
 
@@ -803,15 +843,22 @@ padding: 36px;
 }
 
 
+.footer-copyright {
+  width: 200px;
+  isplay: flex;
+  ustify-content: flex-end;
+  padding-right: 120px;
+}
+
+
 .footer-copyright p,
 .footer-copyright a {
+  idth: 300px;
   color: #FFD180;
   background-color: #32425C; 
-
-outline: 5px solid rgba(255, 0, 0, 0.7);
-  outline-offset: -5px;
-
+  
 }
+   
 
 .footer-copyright a:hover,
 .footer-copyright a:focus {
